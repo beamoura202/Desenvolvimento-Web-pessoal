@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="L1_bea_" data-name="L1(bea)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 425.2 283.47">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #cfcea2;
+        stroke-miterlimit: 10;
+        stroke-width: .28px;
+      }
+
+      .cls-2 {
+        fill: #cfcea2;
+        font-family: UniversityRomanStd, 'University Std';
+        font-size: 12px;
+      }
+    </style>
+  </defs>
+  <line class="cls-1" x1="7.62" y1="97.24" x2="7.62" y2="180.5"/>
+  <path class="cls-1" d="m9.85,97.23s.35,10.49,7.43,10.57v9.05s14.84,2.77,15.09,21.13-11.57,22.38-14.59,22.13v9.31s-7.93,1.27-7.93,11.08"/>
+  <text class="cls-2" transform="translate(24.14 146.86) rotate(-90)"><tspan x="0" y="0">BEA</tspan></text>
+  <line class="cls-1" x1="418.89" y1="180.46" x2="418.89" y2="97.22"/>
+  <path class="cls-1" d="m416.42,97.22s-.39,10.5-7.47,10.58v9.05s-14.84,2.77-15.09,21.13,11.57,22.38,14.59,22.13v9.31s7.98,1.27,7.98,11.08"/>
+  <text class="cls-2" transform="translate(404.14 146.86) rotate(-90) scale(1 -1)"><tspan x="0" y="0">BEA</tspan></text>
+</svg>
