@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 425.2 96.76">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #cfcea2;
+        stroke-miterlimit: 10;
+        stroke-width: .28px;
+      }
+
+      .cls-2 {
+        fill: #cfcea2;
+        font-family: UniversityRomanStd, 'University Std';
+        font-size: 12px;
+      }
+    </style>
+  </defs>
+  <g id="L1_bea_" data-name="L1(bea)">
+    <line class="cls-1" x1="7.62" y1="5.94" x2="7.62" y2="89.19"/>
+    <path class="cls-1" d="m9.85,5.93s.35,10.49,7.43,10.57v9.05s14.84,2.77,15.09,21.13-11.57,22.38-14.59,22.13v9.31s-7.93,1.27-7.93,11.08"/>
+    <text class="cls-2" transform="translate(24.14 55.55) rotate(-90)"><tspan x="0" y="0">BEA</tspan></text>
+    <line class="cls-1" x1="418.89" y1="89.16" x2="418.89" y2="5.92"/>
+    <path class="cls-1" d="m416.42,5.92s-.39,10.5-7.47,10.58v9.05s-14.84,2.77-15.09,21.13,11.57,22.38,14.59,22.13v9.31s7.98,1.27,7.98,11.08"/>
+    <text class="cls-2" transform="translate(404.14 55.55) rotate(-90) scale(1 -1)"><tspan x="0" y="0">BEA</tspan></text>
+  </g>
+  <g id="L2_cantos_" data-name="L2(cantos)">
+    <polyline class="cls-1" points="9.85 5.94 9.85 -81.76 416.42 -81.76 416.42 5.94"/>
+    <path class="cls-1" d="m418.89,5.92v-83.12c-3.7,0-6.76-3.21-6.76-6.95H14.29c0,3.74-2.97,6.87-6.67,6.87h0V5.94"/>
+    <path class="cls-1" d="m7.62,89.19v90.33c3.7,0,6.8,3.14,6.8,6.88h397.77c0-3.74,3-6.87,6.7-6.87h0v-90.37"/>
+    <path class="cls-1" d="m416.42,89.19v95.03H9.85v-95.03"/>
+  </g>
+</svg>

@@ -1,3 +1,76 @@
 body{
-    background-color: black;
+    background-color: #1A1A1A;
+    overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  margin:0px;
+  height:100%;
 }
+
+
+/*//////////////////////mesa////////////*/
+#L1bea{
+    position: relative;
+    height: 100vh;
+    z-index: -1;
+}
+#CS{
+position: absolute;
+top:0;
+}
+#C{
+position: absolute;
+display: none;
+bottom: 35vh;
+}
+#CI{
+    position: absolute;
+    bottom: 0;
+}
+
+/*//////////////////////mesa////////////*/
+.titulo1{
+    position: absolute;
+    width: 100vw;
+    top:5vh;
+    display: grid;
+    place-items: center;
+}
+.t{
+    display: inline-flex;
+}
+h1{
+    margin: 10px;
+    color: #cfcea2c8;
+    font-family: 'Henny Penny';font-size: 2rem;
+}
+.estrelinhas{
+    color: #CFCEA2;
+    margin: 10px;
+    padding: 10PX;
+}
+
+/*//////////////////////Grid 3 colunas////////////*/
+.colunas{
+    position: absolute; 
+    width: 100%;
+    top:0;
+}
+.column{
+    background-color: aliceblue;
+    float: left;
+    width:33.33333333%;
+    height: 100vh;
+    position: relative;
+}
+/*clear floats after the columns*/
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    left: 0;
+}
+
