@@ -37,9 +37,10 @@ bottom: 35vh;
 .column{
     
     float: left;
-    width:33.33333333%;
+    width:calc(100%/3);
     height: 100vh;
     position: relative;
+
 }
 /*clear floats after the columns*/
 .row::after {
@@ -56,7 +57,10 @@ bottom: 35vh;
 .titulo1{
     position: relative;
     top:5vh;
-   
+   /*justifica div ao centro*/ 
+   display: flex;
+   justify-content: center;
+
    
 }
 .t{
@@ -66,6 +70,7 @@ h1{
     margin: 10px;
     color: #cfcea2c8;
     font-family: 'Henny Penny';font-size: 2rem;
+    text-align: center;
 }
 .estrelinhas{
     color: #CFCEA2;
@@ -74,7 +79,8 @@ h1{
 }
 
 /*////////////////Efeito olho a mecher/////////////*/
-.olho{
+
+/*.olho{
     position: relative;
     height: 30%;
     width:auto;
@@ -105,4 +111,166 @@ h1{
     
       
 }
+*/
+
+.olho{
+    position: absolute;
+    top:50%;
+    translate: 0% -50%;    
+    width:100%; 
+    opacity: 20%;
+    height: auto;
+
+
+}
+
+
+.eye{
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    place-items: center;
+    justify-items: center;
+
+
+    
+}
+.ball{
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    place-items: center;
+    justify-items: center;
+
+
+      
+}
+/*//////CARTAS////////*/
+.img-card-esq{
+    position: absolute;
+    top:50%;
+    /*ajustar o alinhamento da imagem*/
+    translate: 0% -50%;
+    z-index: 3;
+}
+.img-card-esq img{
+    width: 100%;
+}
+
+.img-card-dir{
+    position: absolute;
+    top:50%;
+    right: 0;
+    /*ajustar o alinhamento da imagem*/
+    translate: 0% -50%;
+    z-index: 3;
+}
+.img-card-dir img{
+    width: 100%;
+}
+
+
+
+.img-card-bax{
+    position: absolute;
+    bottom:-10%;
+    /*ajustar o alinhamento da imagem*/
+    translate: 0% 0%;
+    z-index: 3;
+    
+    
+}
+.img-card-bax img{
+    width: 100%;
+   
+}
+/*////////////////////CARTAS VIRADAS /////////////*/
+
+
+
+/*1*/
+
+.sec_cartas_viradas_esq{
+    visibility: hidden;
+    position: absolute;
+    top:0;
+    background-color: rgba(14, 11, 15, 0.928);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+.img-card-esq_vir{
+    position: absolute;
+    top:50%;
+    scale: 1.5 1.5;
+    /*ajustar o alinhamento da imagem*/
+    translate: 20% -50%;
+    
+}
+
+.x{
+    position: absolute;
+    top:0;
+    right: 0;
+}
+/*2*/
+
+.sec_cartas_viradas_bax{
+    visibility: hidden;
+    position: absolute;
+    top:0;
+    background-color: rgba(14, 11, 15, 0.928);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+.img-card-bax_vir{
+    position: relative;
+    bottom:0%;
+    scale: 1.5 1.5;
+    display: flex;
+    justify-content: center;
+    translate: 0% 50%;
+
+    /*ajustar o alinhamento da imagem*/
+    
+}
+
+.x1{
+    position: absolute;
+    top:0;
+    right: 0;
+}
+/*3*/
+
+.sec_cartas_viradas_dir{
+    visibility: hidden;
+    position: absolute;
+    top:0;
+    background-color: rgba(14, 11, 15, 0.928);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+.img-card-dir_vir{
+    position: relative;
+    top:50%;
+    scale: 1.5 1.5;
+    display: flex;
+    justify-content: center;
+    translate: 30% -50%;
+
+    /*ajustar o alinhamento da imagem*/
+    
+}
+
+.x2{
+    position: absolute;
+    top:0;
+    right: 0;
+}
+
 

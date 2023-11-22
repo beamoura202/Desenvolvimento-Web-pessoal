@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css.css">
         <link href='https://fonts.googleapis.com/css?family=Henny Penny' rel='stylesheet'>
+        <script src="js.js"></script>
                 <title>DW</title>
 </head>
 <body>
-    <!--CANTOS-->
-    <div id="L1bea">
+    <!-------------------------------CANTOS---------------------->
+    <section id="L1bea">
     
         <svg id="CS" data-name="L2(cantos)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 425.2 98.31">
             <defs>
@@ -158,14 +159,16 @@
             <path class="cls-3" d="m382.67,48.01l1.14.04-1.14.04-.04,1.14-.04-1.14-1.14-.04,1.14-.04.04-1.14.04,1.14Z"/>
           </svg>
      
-        </div>
-    <!--TITULO-->
+        </section>
    
     <!----------------------------GRID(3COLUNAS)-------------->   
-   <div class="colunas">
+     <section class="colunas">
     <div class="row">
         <!-----COLUNA 1   -->
         <div class="column">
+        <div class="img-card-esq">
+        <img src="img/esq_card.png" alt="100%">
+        </div>
         </div>
 
         <!-----COLUNA 2   -->
@@ -188,10 +191,10 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5.11261L13.9498 6.48499C13.8014 10.5429 10.5888 13.7972 6.58486 13.9455L5.11493 14L6.58486 14.0545C10.5888 14.2028 13.8014 17.4571 13.9498 21.515L14 22.8874L14.0502 21.515C14.1986 17.4571 17.4112 14.2028 21.4151 14.0545L22.8851 14L21.4151 13.9455C17.4112 13.7972 14.1986 10.5429 14.0502 6.48498L14 5.11261ZM13.8136 1.40886e-09L14.1864 0L14.4231 6.47098C14.5642 10.3309 17.6202 13.4265 21.4288 13.5676L28 13.811V14.189L21.4288 14.4324C17.6202 14.5735 14.5642 17.6691 14.4231 21.529L14.1864 28H13.8136L13.5769 21.529C13.4358 17.6691 10.3798 14.5735 6.57123 14.4324L2.08515e-09 14.189L0 13.811L6.57123 13.5676C10.3798 13.4265 13.4358 10.3309 13.5769 6.47098L13.8136 1.40886e-09Z" fill="#CFCEA2"/>
                 </svg>
             </section>
-        </div>
-        </div>
+            </div>
+           </div>
 
-        
+      
         <div class="olho">
           <div class="eye">
             <svg id="eye" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.35 21.9">
@@ -248,35 +251,58 @@
           </div>
         </div>
 
+        <div class="img-card-bax">
+          <img src="img/bax_card.png" alt="100%">
+         </div>
+
         </div>
 
         <!-----COLUNA 3   -->
         <div class="column">
-            
+          <div class="img-card-dir">
+            <img src="img/dir_card.png" alt="100%">
+           </div>
         </div>
 
     </div>
-</div>
+    </section>
     <!--OLHO-->
 
-    <!--CARTAS EM GRID(3COLUNAS)-->
+    <!-----------------------------CARTAS viradas------------->
+<div class="sec_cartas_viradas_esq">
+  <div class="img-card-esq_vir">
+    <img src="img/esq_card_2.png" alt="100%">
+  </div>
+  <button class="x">x</button>
+</div>
+<div class="sec_cartas_viradas_bax">
+  <div class="img-card-bax_vir">
+    <img src="img/bax_card_2.png" alt="100%">
+  </div>
+  <button class="x1">x</button>
+</div>
+<div class="sec_cartas_viradas_dir">
+  <div class="img-card-dir_vir">
+    <img src="img/dir_card_2.png" alt="100%">
+  </div>
+  <button class="x2">x</button>
+</div>
       
 </body>
 </html>
 
 
 <script>
-
 var ball = document.getElementsByClassName("ball");
 document.onmousemove = function(){
-  var x = event.clientX * 20 / window.innerWidth + "%";
-  var y = event.clientY * 10 / window.innerHeight + "%";
+  var x = (event.clientX - window.innerWidth*0.5)* 20 / window.innerWidth + "%";
+  var y = (event.clientY- window.innerWidth*0.5) * 10 / window.innerHeight + "%";
 
   for(var i=0;i<2;i++){
-    ball[i].style.left = x;
-    ball[i].style.top = y;
-    ball[i].style.transform = "translate(- "+x+",-"+y+")";
+    ball[i].style.transform = "translate("+x+","+y+")";
 
   }
 }
+
+
 </script>
