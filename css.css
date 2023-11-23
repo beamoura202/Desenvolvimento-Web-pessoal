@@ -1,3 +1,4 @@
+
 body{
     background-color: #1A1A1A;
     overflow-y: hidden; /* Hide vertical scrollbar */
@@ -29,31 +30,62 @@ bottom: 35vh;
 
 
 /*//////////////////////Grid 3 colunas////////////*/
-.colunas{
-    position: absolute; 
-    width: 100%;
-    top:0;
-}
-.column{
-    
-    float: left;
-    width:calc(100%/3);
-    height: 100vh;
-    position: relative;
 
+@media screen and (min-width:767px) {
+    .colunas{
+        position: absolute; 
+        width: 100%;
+        top:0;
+    }
+    .column{
+        
+        float: left;
+        width:calc(100%/3);
+        height: 100vh;
+        position: relative;
+    
+    }
+    /*clear floats after the columns*/
+    .row::after {
+        content: "";
+        display: table;
+        clear: both;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        left: 0;
+    }
+      
 }
-/*clear floats after the columns*/
-.row::after {
-    content: "";
-    display: table;
-    clear: both;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    left: 0;
+
+@media screen and (max-width:767px){
+   
+    .colunas{
+        margin-top: 40%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        position: absolute;
+        top:0;
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+    }
+    .column{
+        position: relative;
+        height: calc(100%/6);
+        padding: 5%;
+        
+    }
+    
 }
+
 /*//////////////////////mesa////////////*/
+ #tit{
+position: absolute;
+top:0;
+width: 100%;
+}
 .titulo1{
     position: relative;
     top:5vh;
@@ -112,81 +144,125 @@ h1{
       
 }
 */
-
-.olho{
-    position: absolute;
-    top:50%;
-    translate: 0% -50%;    
-    width:100%; 
-    opacity: 20%;
-    height: auto;
-
-
-}
-
-
-.eye{
-    position: relative;
-    width: 100%;
-    height: auto;
-    z-index: 2;
-    place-items: center;
-    justify-items: center;
-
-
+@media screen and (max-width:767px){
+    .olho{
+      display: none;  
+    
+    }
     
 }
-.ball{
-    height: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    place-items: center;
-    justify-items: center;
-
-
-      
+@media screen and (min-width:767px){
+    .olho{
+        position: absolute;
+        top:50%;
+        translate: 0% -50%;    
+        width:100%; 
+        opacity: 20%;
+        height: auto;
+    
+    
+    }
+    
+    
+    .eye{
+        position: relative;
+        width: 100%;
+        height: auto;
+        z-index: 2;
+        place-items: center;
+        justify-items: center;
+    
+    
+        
+    }
+    .ball{
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        place-items: center;
+        justify-items: center;
+    
+    
+          
+    }
 }
 /*//////CARTAS////////*/
+/*//////////////////////////////////////////SMAL////////////////////*/
+@media screen and (max-width:767px){
+
 .img-card-esq{
     position: absolute;
     top:50%;
     /*ajustar o alinhamento da imagem*/
     translate: 0% -50%;
     z-index: 3;
+/*animaçao*/
+    left: -120px;
+    transition: all 4000ms linear;
+
 }
+.move1{
+    left: -1000px;
+}
+
 .img-card-esq img{
     width: 100%;
+    scale: 0.5 0.5;
+   
 }
 
 .img-card-dir{
+    height: 100%;
     position: absolute;
     top:50%;
     right: 0;
     /*ajustar o alinhamento da imagem*/
     translate: 0% -50%;
     z-index: 3;
+/*animaçao*/
+    right: 0;
+    transition: all 4000ms linear;
+    left: -120px;
+
 }
+.move5{
+    left: -1000px;
+}
+
 .img-card-dir img{
+    position:absolute;
+    top:0%; 
     width: 100%;
+    scale: 0.5 0.5;
+    transform: rotate(-180deg);   
+
 }
 
 
 
 .img-card-bax{
+    width: 100vw;
+    height: 30vh;
     position: absolute;
-    bottom:-10%;
+    top:-80px;
     /*ajustar o alinhamento da imagem*/
     translate: 0% 0%;
     z-index: 3;
-    
-    
+    transition: all 4000ms linear;
+    right: -100px;
+
+}
+.move3{
+    right: -1000px ; 
 }
 .img-card-bax img{
     width: 100%;
-   
+    scale: 0.5 0.5;
+transform: rotate(-90deg);   
 }
+
 /*////////////////////CARTAS VIRADAS /////////////*/
 
 
@@ -197,52 +273,89 @@ h1{
     visibility: hidden;
     position: absolute;
     top:0;
-    background-color: rgba(14, 11, 15, 0.928);
+    
+    background-color: rgba(14, 11, 15, 0);
     width: 100%;
     height: 100%;
     z-index: 10;
+    transition: all 2000ms linear;
+
 }
+
+
 .img-card-esq_vir{
     position: absolute;
     top:50%;
-    scale: 1.5 1.5;
+    scale: 1 1;
     /*ajustar o alinhamento da imagem*/
     translate: 20% -50%;
-    
+    /*animação*/
+    left: -1000px;
+    transition: all 4000ms linear;
 }
+.opacidade{
+    background-color: rgba(14, 11, 15, 0.928);
+}
+.move2{
+    left: -200px;
+}
+
 
 .x{
     position: absolute;
     top:0;
     right: 0;
+    color: #cfcea2c8;
+    font-family: 'Henny Penny';font-size: 2rem;
+    border: none;
+    background: none;
+    text-decoration: none;
+    font-size: 3rem;
+    margin: 4vh;
 }
 /*2*/
 
 .sec_cartas_viradas_bax{
     visibility: hidden;
     position: absolute;
-    top:0;
-    background-color: rgba(14, 11, 15, 0.928);
+    bottom:0px;
+    background-color: rgba(14, 11, 15, 0);
     width: 100%;
     height: 100%;
     z-index: 10;
+    transition: all 2000ms linear;
 }
 .img-card-bax_vir{
-    position: relative;
-    bottom:0%;
-    scale: 1.5 1.5;
+  
+    position: absolute;
+    scale: 1 1;
     display: flex;
     justify-content: center;
-    translate: 0% 50%;
 
     /*ajustar o alinhamento da imagem*/
-    
+    /*animação*/
+    bottom: -1000px;
+    transition: all 4000ms linear;
 }
+.opacidade2{
+    background-color: rgba(14, 11, 15, 0.928);
+}
+.move4{
+    bottom: 0px;
+}
+
 
 .x1{
     position: absolute;
     top:0;
     right: 0;
+    color: #cfcea2c8;
+    font-family: 'Henny Penny';font-size: 2rem;
+    border: none;
+    background: none;
+    text-decoration: none;
+    font-size: 3rem;
+    margin: 4vh;
 }
 /*3*/
 
@@ -250,27 +363,339 @@ h1{
     visibility: hidden;
     position: absolute;
     top:0;
-    background-color: rgba(14, 11, 15, 0.928);
+    background-color: rgba(14, 11, 15, 0);
     width: 100%;
     height: 100%;
     z-index: 10;
+
+    transition: all 2000ms linear;
+
 }
 .img-card-dir_vir{
-    position: relative;
-    top:50%;
-    scale: 1.5 1.5;
+    display: flex;
+   justify-content: center;
+    position: absolute;
+    scale: 1 1;
+    bottom: -1000px;
     display: flex;
     justify-content: center;
-    translate: 30% -50%;
 
-    /*ajustar o alinhamento da imagem*/
+    left: -50px;
+     transition: all 4000ms linear;
+     transform: rotate(90deg);
+ }
+ .opacidade3{
+     background-color: rgba(14, 11, 15, 0.928);
+ }
+ .move6{
+     bottom: 0px;
+ }
     
-}
+
 
 .x2{
     position: absolute;
     top:0;
     right: 0;
+    color: #cfcea2c8;
+    font-family: 'Henny Penny';font-size: 2rem;
+    border: none;
+    background: none;
+    text-decoration: none;
+    font-size: 3rem;
+    margin: 4vh;
+}
 }
 
 
+
+
+
+
+
+
+
+/*////////////////////////////////////large/////////////////*/
+@media screen and (min-width:767px){
+
+    .img-card-esq{
+        position: absolute;
+        top:50%;
+        /*ajustar o alinhamento da imagem*/
+        translate: 0% -50%;
+        z-index: 3;
+    /*animaçao*/
+        left: 0;
+        transition: all 4000ms linear;
+    
+    }
+    .move1{
+        left: -1000px;
+    }
+    
+    .img-card-esq img{
+        width: 100%;
+    }
+    
+    .img-card-dir{
+        position: absolute;
+        top:50%;
+        right: 0;
+        /*ajustar o alinhamento da imagem*/
+        translate: 0% -50%;
+        z-index: 3;
+    /*animaçao*/
+        right: 0;
+        transition: all 4000ms linear;
+    }
+    .move5{
+        right: -1000px;
+    }
+    
+    .img-card-dir img{
+        width: 100%;
+    }
+    
+    
+    
+    .img-card-bax{
+        position: absolute;
+        bottom:-10%;
+        /*ajustar o alinhamento da imagem*/
+        translate: 0% 0%;
+        z-index: 3;
+        transition: all 4000ms linear;
+    }
+    .move3{
+        bottom: -1000px ; 
+    }
+    .img-card-bax img{
+        width: 100%;
+       
+    }
+    
+    /*////////////////////CARTAS VIRADAS /////////////*/
+    
+    
+    
+    /*1*/
+    
+    .sec_cartas_viradas_esq{
+        visibility: hidden;
+        position: absolute;
+        top:0;
+        
+        background-color: rgba(14, 11, 15, 0);
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        transition: all 2000ms linear;
+    
+    }
+    
+    
+    .img-card-esq_vir{
+        position: absolute;
+        top:50%;
+        scale: 1.5 1.5;
+        /*ajustar o alinhamento da imagem*/
+        translate: 20% -50%;
+        /*animação*/
+        left: -1000px;
+        transition: all 4000ms linear;
+    }
+    .opacidade{
+        background-color: rgba(14, 11, 15, 0.928);
+    }
+    .move2{
+        left: 0px;
+    }
+    
+    
+    .x{
+        position: absolute;
+        top:0;
+        right: 0;
+        color: #cfcea2c8;
+        font-family: 'Henny Penny';font-size: 2rem;
+        border: none;
+        background: none;
+        text-decoration: none;
+        font-size: 4rem;
+        margin: 4vh;
+
+    }
+    /*2*/
+    
+    .sec_cartas_viradas_bax{
+        visibility: hidden;
+        position: absolute;
+        top:0;
+        background-color: rgba(14, 11, 15, 0);
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        transition: all 2000ms linear;
+    }
+    .img-card-bax_vir{
+        position: relative;
+        scale: 1.5 1.5;
+        display: flex;
+        justify-content: center;
+        translate: 0% 50%;
+    
+        /*ajustar o alinhamento da imagem*/
+        /*animação*/
+        bottom: -1000px;
+        transition: all 4000ms linear;
+    }
+    .opacidade2{
+        background-color: rgba(14, 11, 15, 0.928);
+    }
+    .move4{
+        bottom: 0px;
+    }
+    
+    
+    .x1{
+        position: absolute;
+        top:0;
+        right: 0;
+        color: #cfcea2c8;
+        font-family: 'Henny Penny';font-size: 2rem;
+        border: none;
+        background: none;
+        text-decoration: none;
+        font-size: 4rem;
+        margin: 4vh;
+    }
+    /*3*/
+    
+    .sec_cartas_viradas_dir{
+        visibility: hidden;
+        position: absolute;
+        top:0;
+        background-color: rgba(14, 11, 15, 0);
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+    
+        transition: all 2000ms linear;
+    
+    }
+    .img-card-dir_vir{
+        position: relative;
+        top:50%;
+        scale: 1.5 1.5;
+        display: flex;
+        justify-content: center;
+        translate: 30% -50%;
+    
+        /*ajustar o alinhamento da imagem*/
+         /*animação*/
+         right: -1000px;
+         transition: all 4000ms linear;
+     }
+     .opacidade3{
+         background-color: rgba(14, 11, 15, 0.928);
+     }
+     .move6{
+         right: 0px;
+     }
+        
+    
+    
+    .x2{
+
+        position: absolute;
+        top:0;
+        right: 0;
+        color: #cfcea2c8;
+        font-family: 'Henny Penny';font-size: 2rem;
+        border: none;
+        background: none;
+        text-decoration: none;
+        font-size: 4rem;
+        margin: 4vh;
+    }
+}
+
+
+/*////////////////////index//////////////////*/
+/*////////////////////////////////////large/////////////////*/
+@media screen and (min-width:767px){
+.porfolio{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left: 0;
+    
+}
+
+.tituloPortfolio{
+    position: relative;
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+.tituloPortfolio h1{
+    margin-top: 5vh;
+    font-size: 4rem;
+    color:#B098C0;
+}
+.tituloPortfolio p{
+    font-size: 2rem;
+    color:#B098C0;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.imgGato{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.imgGato img{
+    width: 25%;
+}
+}
+/*////////////////////////////////////smal/////////////////*/
+@media screen and (max-width:767px){
+    .porfolio{
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top:0;
+        left: 0;
+        
+    }
+    
+    .tituloPortfolio{
+        position: relative;
+        display: grid;
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+    }
+    .tituloPortfolio h1{
+        margin-top: 10vh;
+        font-size: 2.5rem;
+        color:#B098C0;
+    }
+    .tituloPortfolio p{
+        font-size: 1.5rem;
+        color:#B098C0;
+    }
+    .imgGato{
+
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .imgGato img{
+        width: 60%;
+    }
+}
